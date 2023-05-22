@@ -1,0 +1,67 @@
+secret.py
+readme.txt
+
+
+# Byte-compiled / optimized Python files
+*.pyc
+__pycache__/
+
+# Python virtual environment
+venv/
+venv*/
+
+# Secret keys and sensitive information
+.env
+*.env
+
+# Static files and media uploads
+staticfiles/
+media/
+
+# IDE and editor-specific files
+.idea/
+.vscode/
+
+# Compiled or built files
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+*.exe
+*.log
+*.bak
+*.swp
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Database files
+*.sqlite3
+
+# Compiled JavaScript and CSS
+*.min.js
+*.min.css
+
+# Other temporary or generated files
+*.bak
+*.swp
+*.tmp
+
+# Django secret key file (if separate)
+secret_key.txt
+
+# Site-specific configurations (if separate)
+config.ini
+
+# Logs
+*.log
+
+# Ignore migrations (unless they need to be version controlled)
+**/migrations/
+
+Readme
+seller
+
+razorpay-python-master
