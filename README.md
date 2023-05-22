@@ -16,12 +16,18 @@ My E-commerce Site is an online shopping platform that allows users to browse an
 - Payment transactions are handled through the Razorpay payment gateway.
 - Users can securely complete their payments using various payment methods supported by Razorpay, such as credit/debit cards, net banking, UPI, etc.
 
+### Invoice Feature
+- After successfully completing the payment, users will receive a PDF invoice via email.
+- The invoice will contain details of the purchased items, payment information, and order summary.
+- The PDF invoice is generated dynamically and attached to the email.
+
+
 ## Technologies Used
 
 - Python and Django framework for backend development.
 - HTML, CSS, and JavaScript for frontend development.
 - Razorpay API for payment gateway integration.
-- Database management system (e.g., PostgreSQL, MySQL) for data storage.
+- Database management system (e.g., sqlite) for data storage.
 
 ## Setup Instructions
 
