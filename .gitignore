@@ -3,8 +3,8 @@ readme.txt
 
 
 # Byte-compiled / optimized Python files
-*.pyc
-__pycache__/
+
+
 
 # Python virtual environment
 venv/
@@ -39,7 +39,7 @@ build/
 *.egg
 
 # Database files
-*.sqlite3
+
 
 # Compiled JavaScript and CSS
 *.min.js
@@ -60,7 +60,7 @@ config.ini
 *.log
 
 # Ignore migrations (unless they need to be version controlled)
-**/migrations/
+
 
 Readme
 seller
