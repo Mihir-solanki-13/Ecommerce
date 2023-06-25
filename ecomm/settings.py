@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'products',
     'accounts',
     'home',
-    'seller',
+    # 'seller',
     'mathfilters',
     'django_extensions',
     
