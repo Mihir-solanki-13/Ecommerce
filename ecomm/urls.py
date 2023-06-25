@@ -24,7 +24,7 @@ urlpatterns = [
     path('' , include('home.urls') ),
     path('product/' , include('products.urls') ),
     path('accounts/' , include('accounts.urls') ),
-    path('seller/' , include('seller.urls') ),
+    # path('seller/' , include('seller.urls') ),
     path('admin/', admin.site.urls),
     path('password-reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),
     path('password-reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
