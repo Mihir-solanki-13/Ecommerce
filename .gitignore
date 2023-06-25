@@ -13,6 +13,7 @@ venv*/
 # Secret keys and sensitive information
 .env
 *.env
+env
 
 # Static files and media uploads
 staticfiles/

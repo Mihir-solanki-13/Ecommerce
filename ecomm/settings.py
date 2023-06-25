@@ -30,7 +30,7 @@ SECRET_KEY = SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'home',
     'seller',
     'mathfilters',
+    'django_extensions',
     
 ]
 
@@ -148,19 +149,29 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# sending email through smtp 
+# # sending email through smtp 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_USE_TLS = True
+# EMAIL_PORT = 587
+# # here enter your email id and password generated for your email
+# EMAIL_HOST_USER = EMAIL_HOST_USER
+# EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+# set up your user and password
+# EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+# EMAIL_HOST_USER = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = 'twqvhfpkecnaajks'
+EMAIL_HOST_USER = '13mihir2001@gmail.com'
 EMAIL_PORT = 587
-# here enter your email id and password generated for your email
-EMAIL_HOST_USER = EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
-
-
 ############################
 
 KEY = KEY

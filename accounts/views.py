@@ -127,15 +127,16 @@ def cart(request):
         
         messages.success(request,"Coupon applied ")
         return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-    if cart_obj:
+    payment =None
+    context = {'cart':cart_obj ,'payment':payment}
+    
+    if cart_obj.get_cart_total():
         client = razorpay.Client(auth=(settings.KEY,settings.SECRET))
         data = { "amount": cart_obj.get_cart_total(), "currency": "INR", "receipt": "order_rcptid_11" }
         payment = client.order.create(data=data)
         cart_obj.razor_pay_order_id = payment['id']
         cart_obj.save()
         context = {'cart':cart_obj ,'payment':payment}
-
-    payment =None
 
     return render(request,'accounts/cart.html',context)
 
