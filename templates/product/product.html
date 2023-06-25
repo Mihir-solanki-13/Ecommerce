@@ -11,11 +11,11 @@
             <aside class="col-md-6">
     <article class="gallery-wrap"> 
     <div class="img-big-wrap">
-      <div> <a href="#"><img src="/media/{{product.product_images.first.image}}"></a></div>
+      <div> <a href="#"><img id="main-image" src="/media/{{product.product_images.first.image}}"></a></div>
     </div> <!-- slider-product.// -->
     <div class="thumbs-wrap">
       {% for image in product.product_images.all %}
-      <a href="#" class="item-thumb"> <img src="/media/{{image.image}}"></a>
+      <a href="#" class="item-thumb" onclick="changeImage('{{image.image}}')"><img src="/media/{{image.image}}"></a>
       
       {% endfor %}
 
@@ -73,7 +73,7 @@
                 {% for color in product.color_variant.all %}
                 
                   <label class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" onchange = "get_correct_price_color('{{color.color_name}}')" name="select_color" {% if selected_color == color.color_name %} checked {% endif %}  class="custom-control-input">
+                    <input type="radio" onchange="get_correct_price_color('{{color.color_name}}')" name="select_color" {% if selected_color == color.color_name %} checked {% endif %}  class="custom-control-input">
                     <div class="custom-control-label">{{color.color_name}}</div>
                   </label>
 
@@ -111,7 +111,7 @@
                       {% for size in product.size_variant.all %}
                       
                         <label class="custom-control custom-radio custom-control-inline">
-                          <input type="radio" onchange = "get_correct_price('{{size.size_name}}')" name="select_size" {% if selected_size == size.size_name %} checked {% endif %}  class="custom-control-input">
+                          <input type="radio" onchange="get_correct_price('{{size.size_name}}')" name="select_size" {% if selected_size == size.size_name %} checked {% endif %}  class="custom-control-input">
                           <div class="custom-control-label">{{size.size_name}}</div>
                         </label>
     
@@ -137,13 +137,18 @@
 
     <script>
 
-      function get_correct_price(size){
-        console.log(size)
-        window.location.href = window.location.pathname + `?size=${size}` 
+      function changeImage(imageUrl) {
+        document.getElementById("main-image").src = "/media/" + imageUrl;
       }
-      function get_correct_price_color(color){
-        console.log(color)
-        window.location.href = window.location.pathname + `?color=${color}` 
+
+      function get_correct_price(size) {
+        console.log(size);
+        window.location.href = window.location.pathname + `?size=${size}`;
+      }
+
+      function get_correct_price_color(color) {
+        console.log(color);
+        window.location.href = window.location.pathname + `?color=${color}`;
       }
       
     </script>
