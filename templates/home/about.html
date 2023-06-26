@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About My E-commerce Site</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* Additional CSS styles */
+    .rounded-border {
+      border-radius: 10px;
+    }
+    
+    .text-shadow {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .zoom-effect:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="h-screen flex justify-center items-center">
+    <div class="relative max-w-lg bg-white rounded-border p-8 text-center">
+      {% comment %} <img src="a.jpeg" alt="Profile Picture" class="mx-auto w-40 h-40 rounded-full mb-4 zoom-effect"> {% endcomment %}
+      <h1 class="text-4xl font-bold text-shadow mb-4">My E-commerce Site</h1>
+      <p class="text-lg text-shadow mb-6">Discover a world of convenience and secure online shopping.</p>
+      <ul class="text-left">
+        <li class="mb-2">
+          <span class="bg-blue-500 text-white font-bold px-2 py-1 rounded">Explore</span>
+          a wide range of products at your fingertips.
+        </li>
+        <li class="mb-2">
+          <span class="bg-blue-500 text-white font-bold px-2 py-1 rounded">Enjoy</span>
+          a hassle-free and safe shopping experience.
+        </li>
+        <li class="mb-2">
+          <span class="bg-blue-500 text-white font-bold px-2 py-1 rounded">Avail</span>
+          exciting offers and savings with discount coupons.
+        </li>
+        <li class="mb-2">
+          <span class="bg-blue-500 text-white font-bold px-2 py-1 rounded">Securely</span>
+          complete transactions using trusted payment methods.
+        </li>
+        <li>
+          <span class="bg-blue-500 text-white font-bold px-2 py-1 rounded">Receive</span>
+          detailed order summaries and invoices for your purchases.
+        </li>
+      </ul>
+      <p class="text-lg mt-8">Start your shopping journey with us today!</p>
+    </div>
+  </div>
+</body>
+</html>

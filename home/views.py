@@ -7,3 +7,6 @@ def index(request):
 
     context = {'products' : Product.objects.all()}
     return render(request , 'home/index.html' , context)
+
+def about(request):
+    return render(request,'home/about.html')
