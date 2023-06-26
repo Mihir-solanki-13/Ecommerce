@@ -83,7 +83,7 @@ def activate_email(request , email_token):
     except Exception as e:
         return HttpResponse('Invalid Email token')
     
-
+@login_required
 def add_to_cart(request,uid):
     variant = request.GET.get('variant')
     product = Product.objects.get(uid = uid)
@@ -135,7 +135,7 @@ def cart(request):
     
     if cart_obj.get_cart_total():
         client = razorpay.Client(auth=(settings.KEY,settings.SECRET))
-        data = { "amount": cart_obj.get_cart_total(), "currency": "INR", "receipt": "order_rcptid_11" }
+        data = { "amount": cart_obj.get_cart_total()*100, "currency": "INR", "receipt": "order_rcptid_11" }
         payment = client.order.create(data=data)
         cart_obj.razor_pay_order_id = payment['id']
         cart_obj.save()

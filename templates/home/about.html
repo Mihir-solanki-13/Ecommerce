@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>About My E-commerce Site</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    /* Additional CSS styles */
-    .rounded-border {
-      border-radius: 10px;
-    }
-    
-    .text-shadow {
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-    
-    .zoom-effect:hover {
-      transform: scale(1.05);
-    }
-  </style>
-</head>
-<body>
+{% extends "base/base.html"%}
+
+{%  block start %}
+
+
   <div class="h-screen flex justify-center items-center">
     <div class="relative max-w-lg bg-white rounded-border p-8 text-center">
       {% comment %} <img src="a.jpeg" alt="Profile Picture" class="mx-auto w-40 h-40 rounded-full mb-4 zoom-effect"> {% endcomment %}
@@ -51,3 +35,6 @@
   </div>
 </body>
 </html>
+
+
+{% endblock %}
