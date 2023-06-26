@@ -135,46 +135,51 @@
       
     }
   </style>
+  
 </head>
 
 <body>
-
   <header class="section-header">
-    <section class="header-main border-b h-20">
+    <section class="header-main border-b h-16">
       <div class="container flex items-center justify-between">
         <div class="brand-wrap">
           <ul class="flex">
-            <li class="nav-item"><a class="nav-link brand-link zoom-effect" href="{% url 'index' %}">Home</a></li>
-            <li class="nav-item"><a class="nav-link brand-link zoom-effect" href="{% url 'about' %}">About</a></li>
-            <li class="nav-item"><a class="nav-link brand-link zoom-effect" href="#">Payment</a></li>
+            <li class="nav-item">
+              <a class="nav-link brand-link zoom-effect font-semibold" href="{% url 'index' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link brand-link zoom-effect" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link brand-link zoom-effect" href="#">Payment</a>
+            </li>
           </ul>
         </div>
         <div class="flex-1">
           <!-- Search Form -->
-          {% comment %} <form action="#" class="search-form flex items-center">
+          {% comment %}
+          <form action="#" class="search-form flex items-center">
             <input type="text" class="form-control" placeholder="Search">
             <button class="btn btn-primary bg-blue-500 hover:bg-blue-600" type="submit">
               <i class="fa fa-search"></i>
             </button>
           </form>
-           {% endcomment %}
+          {% endcomment %}
         </div>
         <div class="widgets-wrap">
           <div class="navbar-nav">
             {% if user.is_authenticated %}
-          <div class="flex"> 
-            <div class="widget-header mr-3">
-              <a href="{% url 'cart' %}" class=" icon-sm  border  text-blue-0">
-                <i class="fa fa-shopping-cart fa-lg"></i>
-              </a>
-              <span class="badge badge-pill badge-danger notify text-sm" style="background-color: #FF4081;">{{request.user.profile.get_cart_count}}</span>
+            <div class="flex">
+              <div class="widget-header mr-3">
+                <a href="{% url 'cart' %}" class="w-10 h-10 bg-white flex items-center justify-center rounded-full">
+                  <i class="fa fa-shopping-cart fa-lg"></i>
+                </a>
+                <span class="badge badge-pill badge-danger notify text-sm" style="background-color: #FF4081;">{{request.user.profile.get_cart_count}}</span>
+              </div>
+              <li class="nav-item">
+                <a class="nav-link text-gray-800 rotate-effect" href="{% url 'logout' %}">Logout</a>
+              </li>
             </div>
-            
-            
-            <li class="nav-item">
-              <a class="nav-link text-gray-800 rotate-effect" href="{% url 'logout' %}">Logout</a>
-            </li>
-          </div>
             {% else %}
             <div class="flex">
               <li class="nav-item">
@@ -190,9 +195,10 @@
       </div>
     </section>
   </header>
+  
 
   {% block start %}
-
+  
   {% endblock %}
 
 </body>
