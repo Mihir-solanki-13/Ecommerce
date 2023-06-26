@@ -145,8 +145,9 @@ var options = {
     "image": "https://example.com/your_logo",
     "order_id": "{{payment.id}}", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
     "handler": function (response){
-            console.log('success')
-            window .location.href = `http://127.0.0.1:8000/accounts/success/?order_id={{payment.id}}`
+            // console.log('success')
+             // window .location.href = `http://127.0.0.1:8000/accounts/success/?order_id={{payment.id}}`
+            window .location.href = `https://ecommerce-qdop.onrender.com/success/?order_id={{payment.id}}`
     },
     "prefill": {
         "name": "Mihir",
