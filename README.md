@@ -12,6 +12,9 @@ My E-commerce Site is an online shopping platform that allows users to browse an
 - Users can apply discount coupons during the checkout process to avail discounts on their purchases.
 - The site supports various types of coupons, such as percentage-based discounts, fixed amount discounts, or free shipping.
 
+### Seller feature 
+The seller feature in My E-commerce Site allows users to become sellers and add their products for verification by the admin. Once verified, sellers can list and sell their products on the platform.
+
 ### Razorpay API Integration
 - Payment transactions are handled through the Razorpay payment gateway.
 - Users can securely complete their payments using various payment methods supported by Razorpay, such as credit/debit cards, net banking, UPI, etc.

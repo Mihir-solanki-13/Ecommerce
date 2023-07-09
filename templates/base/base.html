@@ -153,6 +153,9 @@
             <li class="nav-item">
               <a class="nav-link brand-link zoom-effect" href="#">Payment</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link brand-link zoom-effect" href="/seller">Sell</a>
+            </li>
           </ul>
         </div>
         <div class="flex-1">
@@ -170,18 +173,21 @@
           <div class="navbar-nav">
             {% if user.is_authenticated %}
             <div class="flex">
+             
               <div class="widget-header mr-3">
                 <a href="{% url 'cart' %}" class="w-10 h-10 bg-white flex items-center justify-center rounded-full">
                   <i class="fa fa-shopping-cart fa-lg"></i>
                 </a>
                 <span class="badge badge-pill badge-danger notify text-sm" style="background-color: #FF4081;">{{request.user.profile.get_cart_count}}</span>
               </div>
+              
               <li class="nav-item">
                 <a class="nav-link text-gray-800 rotate-effect" href="{% url 'logout' %}">Logout</a>
               </li>
             </div>
             {% else %}
             <div class="flex">
+             
               <li class="nav-item">
                 <a class="nav-link text-gray-800 mr-2 rotate-effect" href="{% url 'login' %}">Login</a>
               </li>

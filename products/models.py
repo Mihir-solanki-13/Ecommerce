@@ -1,8 +1,9 @@
 from django.db import models
 from base.models import BaseModel
 from django.utils.text import slugify
-
-
+from django.db import models
+from seller.models import Seller
+from django.contrib.auth import get_user_model
 
 class Category(BaseModel):
     category_name = models.CharField(max_length=100)
@@ -38,13 +39,13 @@ class SizeVariant(BaseModel):
 
 class Product(BaseModel):
     product_name = models.CharField(max_length=100)
-    slug = models.SlugField(unique=True  , null=True , blank=True)
-    category = models.ForeignKey(Category , on_delete=models.CASCADE , related_name="products")
+    slug = models.SlugField(unique=True, null=True, blank=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name="products")
     price = models.IntegerField()
     product_desription = models.TextField()
-    color_variant = models.ManyToManyField(ColorVariant , blank=True)
-    size_variant = models.ManyToManyField(SizeVariant , blank=True)
-
+    color_variant = models.ManyToManyField(ColorVariant, blank=True)
+    size_variant = models.ManyToManyField(SizeVariant, blank=True)
+    seller = models.ForeignKey(Seller,on_delete=models.CASCADE, related_name="products")
 
     
     def save(self , *args , **kwargs):
