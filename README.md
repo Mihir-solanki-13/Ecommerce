@@ -11,7 +11,6 @@ My E-commerce Site is an online shopping platform that allows users to browse an
 
 ### Coupon Feature
 - Users can apply discount coupons during the checkout process to avail discounts on their purchases.
-- The site supports various types of coupons, such as percentage-based discounts, fixed amount discounts, or free shipping.
 
 ### Seller feature 
 The seller feature in My E-commerce Site allows users to become sellers and add their products for verification by the admin. Once verified, sellers can list and sell their products on the platform.
