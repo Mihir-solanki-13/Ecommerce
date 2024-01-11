@@ -1,4 +1,4 @@
-Live at https://ecommerce-qdop.onrender.com/
+Live at  https://yourbazzar.onrender.com/
 # My E-commerce Site
 
 My E-commerce Site is an online shopping platform that allows users to browse and purchase products conveniently. This README provides an overview of the site's features, setup instructions, and important information.
